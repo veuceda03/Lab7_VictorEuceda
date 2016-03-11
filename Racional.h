@@ -1,10 +1,11 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include <stringstream>
+#include <sstream>
 
 using std::string;
 using std::ostream;
+using std::stringstream;
 
 class Racional{
 	int numerador;
@@ -12,12 +13,13 @@ class Racional{
 	
 public:
 	Racional(int,int);
+	Racional(const Racional&);
 	~Racional();
-	string operator+(const &Racional)const;
-	string operator-(const &Racional)const;
-	string operator*(const &Racional)const;
-	string operator/(const &Racional)const;
-	friend ostream& operator<<(ostream&, const Racional&);
+	Racional operator+(const Racional&)const;
+	Racional operator-(const Racional&)const;
+	Racional operator*(const Racional&)const;
+	Racional operator/(const Racional&)const;
+	friend ostream& operator<< (ostream&, const Racional&);
 };
 
 
