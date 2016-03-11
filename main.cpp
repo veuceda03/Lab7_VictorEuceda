@@ -103,8 +103,7 @@ int main(int argc,char* argv[]){
 			listar(historial);
 		     }else{
 		     	continuar=false;
-		     }	 
-		     cout << endl;    
+		     }   
 	}while(continuar==true);
 	return 0;
 }
